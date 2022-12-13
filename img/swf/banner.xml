@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Ramil Nuyda (Artists' Nest) -->
+<!--
+ra is the percentage for the red component (-100 to 100).
+rb is the offset for the red component (-255 to 255).
+ga is the percentage for the green component (-100 to 100).
+gb is the offset for the green component (-255 to 255).
+ba is the percentage for the blue component (-100 to 100).
+bb is the offset for the blue component (-255 to 255).
+aa is the percentage for alpha (-100 to 100).
+ab is the offset for alpha (-255 to 255).
+-->
+<node>
+	<node enLabel="Incubating" krLabel="비지니스 네트워크" krTitle="기술과의 만남" enTitle="Incubating" contentSwf="img/swf/pict_1.png" url="company/aboutus_01.php?topmenu=1" target="_self" ra="100" rb="150" ga="100" gb="0" ba="100" bb="0" aa="100" ab="0">
+		<krDescription>High-Tech, Green Business를<br/>동시에 만족시키는 최첨단 전자<br/>부품 소재개발</krDescription>
+	</node>
+	<node enLabel="Technology" krLabel="비지니스 네트워크" krTitle="기술과의 만남" enTitle="Technology" contentSwf="img/swf/pict_2.png" url="company/aboutus_01.php?topmenu=1" target="_self" ra="100" rb="-10" ga="30" gb="170" ba="100" bb="10" aa="100" ab="0">
+		<krDescription>High-Tech, Green Business를<br/>동시에 만족시키는 최첨단 전자<br/>부품 소재개발</krDescription>
+	</node>
+	<node enLabel="Investment" krLabel="비지니스 네트워크" krTitle="기술과의 만남" enTitle="Investment" contentSwf="img/swf/pict_3.png" url="company/aboutus_01.php?topmenu=1" target="_self" ra="80" rb="0" ga="100" gb="75" ba="100" bb="180" aa="100" ab="0">
+		<krDescription>High-Tech, Green Business를<br/>동시에 만족시키는 최첨단 전자<br/>부품 소재개발</krDescription>
+	</node>
+</node>
