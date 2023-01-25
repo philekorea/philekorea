@@ -98,7 +98,7 @@ mobile_menu : 모바일 버전 메뉴
 
 .mobile_m .m_menu .row{
     justify-content: flex-start;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .mobile_m .row .col-sm-3:last-child{
@@ -141,7 +141,7 @@ mobile_menu : 모바일 버전 메뉴
 }
 
 .mobile_m #applications .m_menu .m_linkAnchor .menuitem_img img{
-    margin-left: 16px;
+    margin-left: -3px;
 }
 
 
@@ -192,8 +192,8 @@ text-align: center;
 
 
 .mobile_m .tab-content #category .m_menu .s_menu_li{
-    height: 64px;
-    line-height: 64px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
 }
 .mobile_m .tab-content #category .m_menu .s_menu_li a{

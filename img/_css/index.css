@@ -1,4 +1,653 @@
 
+#ms03 .row{position: relative;}
+/*****************************************************************
+de03 : 슬라이드 (이미지만 사용 : 정비율적용)
+*****************************************************************/
+.de03 .carousel-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.de03 #myCarousel3 .arrow_g{
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    border-radius: 10px;
+    z-index: 12;
+    background: linear-gradient(#ffffff, #eee);
+    box-shadow: 0 0 9px #e1e1e1;
+}
+
+.de03 .carousel-control .glyphicon-chevron-left{
+    position: relative;
+    top: -4px;
+    right: 20px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+                                                                            left: 92%;
+                                                                        }
+
+.de03 .carousel-control .glyphicon-chevron-right{
+    position: relative;
+    top: -4px;
+    right: 20px;
+}
+
+
+.de03 .carousel-control .glyphicon-chevron-left::after{
+    background-color: #e1e1e1;
+    width: 1px;
+    height: 25px;
+    position: absolute;
+    left: 38px;
+    top: -5.3px;
+    z-index: 19;
+    content: '';
+}
+
+
+.de03 .carousel-control .glyphicon-chevron-right,.de03 .carousel-control .glyphicon-chevron-left{
+    font-size: 15px;
+}
+
+.de03 #myCarousel3 .carousel-control{  
+    text-shadow: 0 1px 2px;
+    opacity: 1;
+    color: #777;
+    top: 6.5px !important;
+}
+
+.de03 .carousel .carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/*수정부분 */
+.de03 #myCarousel3 .carousel_g{
+    border-radius: 15px;
+    position: absolute;
+    /*top:calc(80% + 70px);*/
+    top: 51.2px;
+    left: 115.8%;
+    width: 46px;
+    height: 33px;
+    z-index: 16;
+}
+
+.de03 #myCarousel3 .carousel_g > li{
+    display: block;
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height:33px;;
+    line-height: 32px;
+    background: none;
+    border: none;
+    color: #111;
+    font-size: 1.15em;
+    opacity: 0;
+}
+
+.de03 #myCarousel3 .carousel_g > li.active{
+    opacity: 1;
+}
+
+.de03 .carousel-caption{
+     bottom: 15%;  
+}
+
+.de03 .item3 .carousel-caption{
+    bottom: 0;
+}
+
+.tooltip-link{
+    position: relative;
+}
+
+.tooltip-link[data-tooltip]:not([data-tooltip=""])::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 10px 7px;
+    border-radius: 10px;
+    width: 120px;
+    left: 20%;
+    top: 75%;
+    opacity: 0;
+    transition: all 0.5s linear;
+    font-size: 10px;
+}
+
+.tooltip-link:hover[data-tooltip]:not([data-tooltip=""])::before {
+    opacity: 1;
+}
+
+
+.de03 .carousel-caption.moto{
+    display: block;
+    bottom: 9%;
+    left:calc(7% + 0px);
+    padding: 3px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    text-align: left;
+}
+
+.de03 .carousel-caption.moto .box{
+    width: 80%;
+}
+
+.de03 .carousel-caption.moto p{
+    color: #000;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+}
+
+.de03 .carousel-caption.moto strong {
+    font-size: 1.24em;
+}
+
+.de03 .carousel-caption.moto .ab-logo {
+    width: 2.5%;
+}
+
+.de03 .carousel-caption.moto .full {
+   background: #031a33;
+   padding: 0.9% 1.1%;
+   color: #fff;
+   font-weight: bold;
+}
+
+.de03 .carousel-caption.moto .null {
+   border: 2px solid #031a33;
+   padding: 0.6% 1.1%;;
+   font-weight: bold;
+}
+
+.de03 .carousel-caption.moto .margin {
+    margin-top: 15px;
+}
+
+.de03 .carousel-caption.moto .pp_g{
+    margin-top: 16px;
+}
+
+.de03 .carousel-caption.moto .pp2{
+    margin-top: 70px;
+    font-weight: 600;
+    font-size: 1.65em;
+}
+
+.de03 .carousel-caption .box .btn{
+    color:#000;
+    font-weight: 500;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px 40px;
+}
+
+.de03 .carousel-caption .box .btn:hover{
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@media screen and (max-width: 1100px){
+    .de03 .carousel-caption.moto p {font-size:0.8em;}
+}
+
+@media screen and (max-width: 1300px){
+    .de03 .carousel-caption.moto {bottom: 5%;}
+    .de03 .carousel-caption.moto p {font-size:0.9em;}
+}
+
+@media screen and (max-width: 1600px){
+    .de03 .carousel-caption.moto {bottom: 5.5%;}
+    .de03 .carousel-caption.moto p {font-size:1em;}
+}
+
+@media screen and (max-width: 1800px){
+    .de03 .carousel-caption.moto p {font-size:1em;}
+}
+
+
+/*neb_slide*/
+.de03 .neb_slide{
+    top: 18.5%;
+    left: 12%;
+}
+
+.de03 .slide14_contents{
+    background-color: rgba(255,255,255,0.35);
+    width: 1400px;
+    height: 500px;
+    border-radius: 18px;
+    margin: 0 auto;
+}
+
+.de03 .slide14_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 10px 20px;
+    position: relative;
+}
+
+.de03 .neb_app{
+    width: 280px;
+    height: 80px;
+    background-color: red;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.de03 .neb_app div{
+    position: absolute;
+    top: 40px;
+    left: 9px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 260px;
+    height: 50px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.de03 .neb_app > div span{
+    color: #1c1c1b;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    width: 100px;
+}
+
+.de03 .neb_app1 {
+    background:url("../_des/de03/neb_app/neb_app.jpg");
+}
+
+.de03 .neb_app:hover {
+    transform: scale(1.07);
+    transition: all 1s;
+    z-index: 99;
+    color: #000;
+}
+
+.de03 .neb_app2{
+    background:url("../_des/de03/neb_app/neb_app_2.jpg");
+}
+.de03 .neb_app3{
+    background:url("../_des/de03/neb_app/neb_app_3.jpg");
+}
+.de03 .neb_app4{
+    background:url("../_des/de03/neb_app/neb_app_4.jpg");
+}
+.de03 .neb_app5{
+    background:url("../_des/de03/neb_app/neb_app_5.jpg");
+}
+.de03 .neb_app6{
+    background:url("../_des/de03/neb_app/neb_app_6.jpg");
+}
+.de03 .neb_app7{
+    background:url("../_des/de03/neb_app/neb_app_7.jpg");
+}
+.de03 .neb_app8{
+    background:url("../_des/de03/neb_app/neb_app_8.jpg");
+}
+
+.de03 .neb_app9{
+    background:url("../_des/de03/neb_app/neb_app_9.jpg");
+}
+.de03 .neb_app10{
+    background:url("../_des/de03/neb_app/neb_app_10.jpg");
+}
+.de03 .neb_app11{
+    background:url("../_des/de03/neb_app/neb_app_11.jpg");
+}
+.de03 .neb_app12{
+    background:url("../_des/de03/neb_app/neb_app_12.jpg");
+}
+.de03 .neb_app13{
+    background:url("../_des/de03/neb_app/neb_app_13.jpg");
+}
+.de03 .neb_app14{
+    background:url("../_des/de03/neb_app/neb_app_14.jpg");
+}
+.de03 .neb_app15{
+    background:url("../_des/de03/neb_app/neb_app_15.jpg");
+}
+.de03 .neb_app16{
+    background:url("../_des/de03/neb_app/neb_app_16.jpg");
+}
+/*neb_slide 종료*/
+
+
+
+.de03 .item3 .row{
+    padding: 0 50px;
+}
+
+.de03 .item3 .row .col-sm-1, ,.de03 .item3 .row .col-sm-2, .de03 .item3 .row .col-sm-4{
+    height: 145px;
+}
+
+.de03 .item3 .row .col-sm-1> a, .de03 .item3 .row .col-sm-2 > a, .de03 .item3 .row .col-sm-4 > a{
+    height: 145px;
+    display: block; 
+}
+
+.de03 .item3 .carousel-caption{
+    width: 100%;
+    left: 0;
+    top: 10%;
+}
+
+@media screen and (max-width: 1700px) {
+    .de03 .neb_slide{
+        top: 18%;
+        left: 13%;
+    }
+    .de03 .slide14_contents{
+        width: 1200px;
+        height: 430px;
+    }
+    .de03 .slide14_grid{
+        grid-template-columns: repeat(4,180px);
+        grid-gap: 5px 92.5px;
+    }
+    .de03 .neb_app{
+        width: 220px;
+        height: 60px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .de03 .neb_app:hover {
+        transform: scale(1.05);
+    }
+    .de03 .neb_app div{
+        top: 40px;
+        left: 10px;
+        width: 200px;
+        height: 40px;
+    }
+    .de03 .neb_app > div span{
+        font-size: 12.5px;
+        line-height: 20px;
+    }
+    
+    .item2 .slide_brand{
+        grid-template-columns: repeat(5,190px);
+        height: 100px;
+    }
+ 
+    .de03 .carousel-caption.moto p{
+        font-size: 1em;
+    }
+     
+}
+
+@media screen and (max-width: 1500px) {
+    .de03 .neb_slide{
+        top: 18%;
+        left: 12%;
+    }
+    .de03 .slide14_contents{
+        width: 1100px;
+        height: 400px;
+    }
+    .de03 .slide14_grid{
+        grid-template-columns: repeat(4,220px);
+        grid-gap: 10px 35px;
+    }
+    .de03 .neb_app{
+        width: 180px;
+        height: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .de03 .neb_app:hover {
+        transform: scale(1.07);
+    }
+    .de03 .neb_app div{
+        top: 35px;
+        left: 12px;
+        width: 160px;
+        height: 40px;
+    }
+    .de03 .neb_app > div span{
+        font-size: 11.5px;
+        line-height: 18px;
+    }
+    .item2 .slide_brand{
+        grid-template-columns: repeat(5,170px);
+    }
+    .banner_hover{
+        height: 180px;
+    }
+    .de03 .carousel-caption.moto p{
+        font-size: 0.9em;
+    }
+    .tooltip-link[data-tooltip]:not([data-tooltip=""])::before {
+        top: 50%;   
+    }
+   
+}
+
+@media screen and (max-width: 1300px) {
+    .de03 .neb_slide{
+        top: 18%;
+    }
+    .de03 .slide14_contents{
+        width: 1000px;
+        height: 350px;
+    }
+    .de03 .slide14_grid{
+        grid-template-columns: repeat(4,200px);
+        grid-gap: 0px 19px;
+    }
+    .de03 .neb_app{
+        width: 180px;
+        height: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .de03 .neb_app:hover {
+        transform: scale(1.07);
+    }
+    .de03 .neb_app div{
+        top: 25px;
+        left: 12px;
+        width: 160px;
+        height: 40px;
+    }
+    .de03 .neb_app > div span{
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .item2 .slide_brand{
+        grid-template-columns: repeat(5,160px);
+    }
+    
+    .de03 .carousel-caption.moto{
+        bottom: 7%;
+    }
+    
+    .de03 .carousel-caption.moto p{
+        font-size: 0.8em;
+    }
+    .tooltip-link[data-tooltip]:not([data-tooltip=""])::before {
+        top: 40%;   
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .de03 .neb_slide{
+        top: 16%;
+    }
+    .de03 .slide14_contents{
+        width: 900px;
+        height: 310px;
+    }
+    .de03 .slide14_grid{
+        grid-template-columns: repeat(4,175px);
+        grid-gap: 0px 18px;
+    }
+    .de03 .neb_app{
+        width: 160px;
+        height: 40px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .de03 .neb_app:hover {
+        transform: scale(1.05);
+    }
+    .de03 .neb_app div{
+        top: 15px;
+        left: 12px;
+        width: 140px;
+        height: 40px;
+    }
+    .de03 .neb_app > div span{
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    .de03 .carousel-caption.moto{
+        bottom: 19%;
+    }
+    
+    .item2 .slide_brand{
+        grid-template-columns: repeat(5,140px);
+        grid-gap: 10px;
+    }
+    .de03 .carousel-caption.moto{
+        bottom: 3%;
+    }
+    
+    .de03 .carousel-caption.moto p{
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .item2 .slide_brand{
+        grid-template-columns: repeat(5,120px);
+        grid-gap: 10px;
+    }
+    .banner_hover{
+        width: 260%;
+    }
+    .de03 .carousel-caption.moto{
+        bottom: 1%;
+    }
+    .de03 .carousel-caption.moto p{
+        font-size: 0.05em;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .de03 {
+        display: none;
+    }
+          
+}
+
+
+
+
+
+/*********************************************
+  상단 quick 메뉴
+************************************************/
+.ms03 .container-fluid .row{
+    position: relative;
+}
+
+.rowgroup {
+    position: absolute;
+    left: 23.3%;
+    width: 53%;
+    z-index: 10;
+    bottom: -6%;
+}
+.rowgroup .quick {
+    display: flex;
+    flex-wrap: wrap;    
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 6px rgb(0 0 0 / 7%);
+    align-items: center;
+    justify-content: center;
+    background: #fff;      
+}
+
+.rowgroup .quick li{
+    flex: 1;
+    cursor: pointer;
+}
+
+/*
+.rowgroup .quick li:nth-child(-n+3) a {
+    border-bottom: 1px solid #eee;
+}
+*/
+
+.rowgroup .quick li a {
+    display: block;
+    font: 400 18px/22px "Poppins", "Noto Sans KR", sans-serif;
+    color: #111;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s;
+    align-items: center;
+    padding: 16.5% 5%;
+    /* white-space: nowrap; */
+    word-break: keep-all;
+    text-align: center;
+}
+/*
+.rowgroup .quick li a::before {
+    display: inline-block;
+    content: '';
+    width: 50px;
+    height: 90px;
+    transition: all 0.2s;
+}
+*/
+.rowgroup .quick li a::after{
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: #eee;
+    position: absolute;
+    left: 0;
+    top: 0;
+        
+}
+.rowgroup .quick li a span.text {
+    display: block;
+    font: 300 15px/20px "Poppins", "Noto Sans KR", sans-serif;
+    color: #888;
+    word-break: keep-all;
+}
+.rowgroup .quick li:hover{
+    background: #fff;
+    border-radius: 10px;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px 6px rgb(0 0 0 / 6%);
+}
+
+@media screen and (max-width:991px){
+    .rowgroup{
+        display: none;
+    }
+}
 
 /*****************************************************************
 de04 : 추출게시물1
@@ -17,10 +666,12 @@ de04 : 추출게시물1
     padding: 20px 20px 15px 20px;
     position: relative;
 }
+
 .de04 .row:first-child .news_box p{
     font-size: 1.3em;
     margin-top: 15px;
 }
+
 .de04 .row:first-child .news_box span{
     display: block;
     color: white;
@@ -30,9 +681,22 @@ de04 : 추출게시물1
     text-align: center;
     padding: 6px 0;
 }
+
 .de04 .row iframe{
     width: 100%;
 }
+
+.de04 .n_tab{
+    max-height: 230px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 1300px) {
+        .de04 .row:first-child .news_box span{
+            margin: 60px auto 0;
+        }
+    }
 
 @media screen and (max-width: 500px) {
     .de04 .row:first-child .news_box{
@@ -61,7 +725,7 @@ de04 : 추출게시물1
     }
 }
 .de04 .n_tab .nav-tabs > li > a{
-    transition: all 0.2s ;
+    transition: all 0.2s;
     margin-right: 1px;
     background-color: #001632;
     border-bottom: 1px solid #ddd; 
@@ -103,6 +767,7 @@ de04 : 추출게시물1
 /*****************************************************************
 de08 : 3단형
 *****************************************************************/
+/*
 .de08 {
     margin: 0px 0px;
     text-align: left;
@@ -110,18 +775,14 @@ de08 : 3단형
 .de08 .row > div {
     margin: 0 0 30px;
 }
-
-/**/
 .de08 .row > div > a{
     display: block;
     background:rgba(255,255,255,0.4);
-    padding-top: 10px;
 }
 .de08 .row > div .imgArea {
     overflow: hidden;
     margin: 15px 0;
     background:rgba(255,255,255,0.2);
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +817,7 @@ de08 : 3단형
     transform: scale(1.0);
 }
 
-/**/
+
 .de08 .row > div .txtArea {
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
@@ -219,13 +880,12 @@ de08 : 3단형
         font-size: 0.8em;
     }
     .de08 .row > div > a{
-        width: 270px;
+        width: 100%;
         margin: 0 auto;
-        padding-top: 20px;
         border-radius: 2px;
     }
     
-}
+}*/
 
 /*****************************************************************
 de10 : 예약문의(메인폼메일)
@@ -306,9 +966,8 @@ de15 : 불규칙블록:브랜드 인포메이션
     width: 100%;
     background-size: cover;
     background-position: center center;
-/*    border: 5px solid #fff;*/
+    /*border: 5px solid #fff;*/
 }
-
 
 .de15 .con2{
     background-position: center 47%!important;
@@ -398,7 +1057,6 @@ de15 : 불규칙블록:브랜드 인포메이션
     border: none;
 }
 
-    
 
 @media (max-width:500px) {
     .de15 .con{
@@ -433,10 +1091,6 @@ de15 : 불규칙블록:브랜드 인포메이션
 
 }
 
-
-
-
-
 /*****************************************************************
 de109 : sales promotion
 *****************************************************************/
@@ -452,7 +1106,6 @@ de109 : sales promotion
     border: 1px solid #ddd;
     box-sizing: border-box;
 }
-
 
 .de109 .s_img:hover .promotion_hover {
     visibility: visible;
@@ -497,9 +1150,11 @@ de109 : sales promotion
     font-size: 1.25em;
     font-weight: 600;
 }
+
 .de109 .txt_g .name{
     height: 40px;
 }
+
 .de109 .s_img .txt_g .view{
     border: 1px solid #d2d2d2;
     width: 40%;
@@ -553,24 +1208,24 @@ de109 : sales promotion
 .de109 a .sale .orange{
     color:orange;
     font-weight: 600;
-     font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 .de109 .txt_g .name{
     font-size: 1.05em;
-    
 }
+
 .de109 .s_img:hover .after{
     opacity: 1;
     transition: 0.5s;
 }
+
 .de109 .s_img:hover .view{
     background: #fff;
     color: #001632;
     padding-left: 15px;
     transition: 0.4s;
 }
-
 
 @media screen and (max-width: 1300px){
     .de109 .s_img .img_g{
@@ -649,7 +1304,6 @@ de109 : sales promotion
     }
 }
 
-    
 @media screen and (max-width: 768px){
     .de109 .col-xs-6{
         width: 100%;
@@ -704,7 +1358,6 @@ de109 : sales promotion
     }
 }
     
-
 @media screen and (max-width: 500px){
     .de109 .col-md-6{
         padding: 10px 8px;
@@ -768,8 +1421,38 @@ de109 : sales promotion
     .de109 .promotion_img2 .img{
         display: none;
     }
-    
 }
+
+/*****************************************
+ de110 : new product
+**********************************************************/
+
+.de110 .cover a .new{
+    color: orange;
+    display: block;
+    background: black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+.de110 .cover a .new p{
+    margin-top: 10px;
+}
+
+/*****************************************************************
+Hot Selling
+*****************************************************************/
+.hot2{
+    margin-top: 40px;
+}
+
+
 
 
 /*****************************************************************
@@ -785,7 +1468,6 @@ de196 : 모바일전용 배너
     .de196{
         display: none;
     }
-    
 }
 
 /*****************************************************************
@@ -807,90 +1489,368 @@ de198 : NEB 모바일 카드
 }
 
 /*****************************************************************
-de199 : NEB Support
+neb_card : NEB Support
 *****************************************************************/
 
-.de199{
-    display: flex;
+
+#neb_card .card-list .card {
+   
+    height: 100%;
+}
+#neb_card .card-list .card-body {
+    padding: 1.5em 2em 2em;
+    min-height: 140px;
+    height: auto;
 }
 
-.de199 .neb_sup_box{
-    margin-right: 30px;
-}
-
-.de199 .neb_app_box{
-    width: 580px;
-    height: 392px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
-    box-sizing: border-box;
-}
-
-.de199 .neb_app_box .neb_app_txt{
-    position: relative;
-}
-
-.de199 .neb_app_box .neb_app_txt h5{
-    font-size: 20px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: #111;
-}
-
-.de199 .neb_app_box .neb_app_txt p{
-    font-size: 16px;
-    color: #333;
-    position: absolute;
-    left: 20px;
-    top: 45px;
-}
-
-.de199 .neb_app_box .neb_app_txt span{
-    color: #D88455;
-    font-size: 16px;
-    position: absolute;
-    font-weight: 500;
-    top: 110px;
-    right: 20px;
-}
-
-.de199 .neb_sup_box img{
-    border: 1px solid #AFAEB3;
-}
-
-.de199 .neb_sup_box .neb_sup_txt{
-    background-color: #F6F6F3;
-    width: 315px;
-    height: 176px;
-}
-
-
-.de199 .neb_sup_box .neb_sup_txt{
-    position: relative;
-}
-
-.de199 .neb_sup_box .neb_sup_txt h5{
-    position: absolute;
+#neb_card  .card-list .card-body h5 {
     font-size: 18px;
-    color: #111;
-    left: 20px;
-    top: 20px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: .1px;
+    color: #1d1d1f;
+    font-family: 'Roboto', sans-serif;
+}
+#neb_card  .card-list .card-body p {
+    opacity: .87;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: .1px;
+    color: #383838;
+    padding: 1em 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.de199 .neb_sup_box .neb_sup_txt p{
-    position: absolute;
-    font-size: 15px;
-    color: #9E9E9D;
-    left: 10px;
-    top: 50px;
-    padding: 0 10px;
-}
-
-.de199 .neb_sup_box .neb_sup_txt span{
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    color: #D88455;
+#neb_card  .card-list .card-body a {
+    opacity: .87;
+    font-size: 14px;
     font-weight: 500;
-    font-size: 13px;
+    line-height: 1.93;
+    letter-spacing: .1px;
+    text-align: right;
+    color: #ca4a05;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#neb_card  .card-list .card-body .input-group-addon {
+    background: #f2661b;
+    color: #fff;
+}
+
+#neb_card .card-list .card-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #fff;
+    }
+
+#neb_card .input-group-addon:last-child {
+    border-left: 0;
+}
+#neb_card .protocols-widget__search-submit {
+    float: right;
+    padding: 0;
+    background: 0 0;
+    border: none;
+        position: relative;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: -6px;
+    left: -5px;
+    color: #fff;
+}
+@media screen and (min-width: 992px){
+    .padding-8 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#neb_card .card-list .card {
+    background-color: #f6f6f3;
+    border: 1px solid #f6f6f6;
+    margin-bottom: 15px;
+    }
+#neb_card .card-list .card-body {
+    min-height: 222px;
+} 
+#neb_card .card-list .card-img {
+    display: block;
+    max-height: 197px;
+    }
+}
+
+/*****************************************************************
+de196 : 모바일전용 배너
+*****************************************************************/
+
+.de196 img{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 550px) {
+    .de196{
+        display: none;
+    }  
+}
+
+/*****************************************************************
+de198 : NEB 모바일 카드
+*****************************************************************/
+
+.de198 .neb_mobile_box{
+    margin-bottom: 25px;
+}
+
+.de198 .neb_mobile_box_cont{
+    padding: 10px 0;
+    color: #333;
+}
+
+.de198 .neb_mobile_box_link{
+    color: #ca4a05;
+    font-weight: 500;
+}
+
+/*************************************************
+de202 : 풀메뉴
+**********************************************/
+.all_menu .wrap .close_button{
+ 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+    width:55px;
+    margin: 0 auto 30px;
+    border: 3px solid #afa6a6;
+    padding: 7px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.all_menu .wrap .hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: #afa6a6;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.all_menu .wrap .hamburger:hover{
+  cursor: pointer;
+}
+
+.all_menu .wrap #hamburger.is-active{
+    transform-origin: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.all_menu .wrap #hamburger.is-active .line:nth-child(2){
+  width: 0px;
+}
+
+
+.all_menu .wrap #hamburger.is-active .line:nth-child(1){
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+.all_menu .wrap #hamburger.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-11px) rotate(90deg);
+  -ms-transform: translateY(-11px) rotate(90deg);
+  -o-transform: translateY(-11px) rotate(90deg);
+  transform: translateY(-11px) rotate(90deg);
+}
+
+.all_menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1040;
+    overflow-y: scroll;
+    background: #fff;
+    
+}
+.all_menu .wrap { 
+    padding-top: 50px;
+    height: 100vh;
+    
+}
+.all_menu .full_menu {
+    max-width: 1600px;
+   display: flex; 
+   justify-content: space-around;
+    padding: 3%;
+   box-shadow:5px 5px 10px -3px rgb(0 0 0 / 50%);
+}
+
+.all_menu::-webkit-scrollbar{
+    width: 6px;
+}
+.all_menu::-webkit-scrollbar-thumb{
+     height: 3px;
+    background-color: #001632;
+    border-radius: 10px;
+}
+.all_menu::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+
+.all_menu .full_menu .b_title {
+    margin-bottom: 10px;
+font-size: 1.8rem;
+font-weight: bold;
+}
+.all_menu .full_menu a {
+    color:#3e3333;
+    white-space: nowrap;
+    
+}
+.full_menu .set {
+    margin-bottom: 30px; 
+    width: 90%;
+}
+
+
+.full_menu .title {
+                        color: #e88c07;
+                        font-weight: bold;
+                        font-size: 1.4rem;
+                        border-bottom-right-radius: 5px;                    
+    border-bottom: 1px solid #e88c07;
+                        padding: 2px;
+                        margin-bottom: 10px;
+                    }
+.full_menu .section {width: 90%;}
+.full_menu .pro_2,.pro_3 {margin-top: 47px;}
+.full_menu .pro_4 {width: 70%;}
+.full_menu .pro_4 .sub_menu a {color: #777;}
+.full_menu .pro_4 .Lab_Services {margin-bottom: 30px;}
+.full_menu .pro_4 .event {margin-bottom: 60px;}
+.full_menu .pro_4 .support {margin-bottom: 82px;}
+
+
+
+
+
+
+@media screen and (min-width: 1300px){
+.full_menu {width: 90%; margin: 0 auto;}
+.full_menu a {font-size: 1.5rem;}
+.full_menu .title {font-size: 1.6rem; border-radius: 5px;}
+                       }
+
+
+
+
+@media screen and (min-width: 1500px){
+.full_menu {width: 80%; margin: 0 auto;}
+.full_menu .title {font-size: 1.7rem;}
+.full_menu .pro_4 .sub_menu a {font-size: 1.4rem;}
+.full_menu .b_title {font-size: 2rem;}
+                                        }
+
+/******************************************************************
+메인 페이지 인디케이터
+**********************************************************************/
+
+#indicator{
+    position: fixed;
+    top: calc(50% - 80px);
+    left: 30px;
+    z-index: 10000;
+    transform: translateY(-50%);
+    display: none;
+}
+#indicator #fp-nav.left ul li{
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    background: transparent;
+    outline: 0;
+    border-radius: 10%;
+    box-sizing: border-box;
+    margin: 0;
+    opacity: 1;
+    cursor: pointer;
+    height: 30px;
+}
+
+#fp-nav.left li a{
+   display: block;
+   position: relative;
+}
+
+#fp-nav.left li a > span{
+    display: block;
+    width: 2px;
+    background: #ff7d4d;
+    height: 18px;
+    position: absolute;
+    top: 0px;
+    left: -7px;
+}
+
+#fp-nav.left ul li .fp-tooltip{
+    font-size: 1.35rem;
+    left: auto;
+    right: -25px;
+    top: -7px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#fp-nav.left ul li.active .fp-tooltip{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fff; 
+}
+
+#fp-nav.left li.active{
+    padding: 3px 0;
+}
+
+#fp-nav.left li.active a span{
+    border-radius: 8px;
+    width: 115%;
+    z-index: -1;
+    box-shadow: 2px 3px 3px rgb(84 83 83 / 30%);
+    height: 22px;
+    top: -2px;
+    transition: ease-in-out all 0.3s;
+}
+
+@media screen and (max-width:991px){
+    #indicator{
+        display: none;
+    }
 }

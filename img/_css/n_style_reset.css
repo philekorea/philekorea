@@ -235,8 +235,13 @@ bootstrap 버튼 : 기본버튼 변형
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 0px;
+    margin-top: -5px;
+    padding-right: 5px;
 }
+
+
+
+
 .grid_9 .row div .box .txtArea{
     padding-left: 13px;
     padding-top: 15px;

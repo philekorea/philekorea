@@ -10,14 +10,16 @@ html {
 }
 a{cursor:pointer;}
 
-
+.hidden_scroll{
+    height: 100%; overflow: hidden;
+}
 
 
 /*****************************************************************
 header : 상단전체영역
 *****************************************************************/
 #header {
-    height: 120px;/* 120px,100px auto */
+    height: 107px;/* 120px,100px auto */
 }
 #header .gnb {
     -webkit-transition: all 0.2s ease-out;
@@ -53,19 +55,6 @@ header : 상단전체영역
 
 
 
-@media screen and (max-width: 991px) {
-    
-    #header .gnb {
-        background-color: #fff;/**/
-    }
-    #header .gnb.on {
-        top: 0px;
-    }
-}
-
-
-
-
 /*****************************************************************
 상단영역
 *****************************************************************/
@@ -82,13 +71,7 @@ header : 상단전체영역
     height: 55px;;
 }
 
-#header  .topArea_inner {
-   /* float: right;*/
-    /*padding: 5px 0;*/
-    /* display: flex;
-    max-width: 1325px;
-    margin: auto; */
-}
+
 
 #header .topArea .nt_login ul{
     overflow: hidden;
@@ -101,13 +84,11 @@ header : 상단전체영역
         font-weight: 500;
     }
     
-/* .topArea_inner .nt_search img{
-    display: none;
-} */
+
 
 #header .topArea_inner .nt_search dl dd input[type=text]{
-    border: 1.5px solid #cacaca;
-    height: 30px !important;
+    border: 5px solid #ff7d4d;
+    height: 34px !important;
     width: 81%;
     min-width: 250px;
     outline: none !important;
@@ -119,6 +100,10 @@ header : 상단전체영역
     background-position: 96%;
 }
 
+#header .topArea_inner .nt_search dl dd input[type=text]:focus{
+     box-shadow: 1px 2px 5px rgb(0 0 0 / 40%);
+    border-width: 4px;
+}
 
 #header .logoArea .logo{
     position: relative;
@@ -130,11 +115,7 @@ header : 상단전체영역
 width: 100%;
 }
 
-@media screen and (max-width: 991px) {
-    .topArea_inner {
-        padding: 5px 0px 0;
-    }
-}
+
 
 /* nt_search : 제품검색 */
 #header .nt_search{
@@ -198,142 +179,17 @@ width: 100%;
         -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     display: block;
-    width: 50px;
+    width: 52px;
     height: 28px;
     line-height: 28px;
     text-align: center;
    
     }
-/* .nt_login {
-    float: right;
-} */
-/* .nt_login li {
-    float: left;
-    margin-left: 1px;
-} */
+
 .nt_login li a:hover {
     box-shadow: 0 0 5px rgba(255,255,255,0.8);
     color: #111;
 }
-
-
-/*****************************************************************
-상단영역 : 디자인샘플, 퀵메뉴, sns, 로그인, 기타
-*****************************************************************/
-/* nt_phone : 이메일 보내기!! */
-/* .nt_phone {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding-left: 5px;
-}
-.nt_phone div {
-    width: 190px;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    background-color: transparent;
-    border-right: 1px solid #eee;
-    font-size: 1.0em;
-}
-    
-.nt_phone i {
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    background-color: #001632;
-    border-radius: 2px;
-    padding: 5px;
-    vertical-align: baseline;
-    font-weight: 500;
-    font-size: 1.0em;
-    color: #fff;
-}
-.nt_phone div:hover i {
-    background-color: #666;
-}
-
-.nt_phone div .nt_phone_mail {
-    vertical-align: baseline;
-    margin-left: 10px;
-    font-weight: 500;
-    font-size: 1.250em;
-    color: #666;
-} */
-
-
-
-/* nt_quick : 퀵메뉴 */
-
-/* .nt_quick {
-    display: block;
-    position: relative;
-    float: left;
-    margin-right: 10px;
-}
-
-.nt_quick p {
-    width: 130px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    cursor: pointer;
-    color: #666;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-
-.nt_quick:hover p {
-    color: #666;
-}
-
-.nt_quick ul {
-    z-index: 100;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background-color: #fff;
-    width: 130px;
-    display: none;
-}
-
-
-.nt_quick ul li a {
-    display: block;
-    line-height: 35px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.0em;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-.nt_quick ul li:hover a {
-    position: relative;
-    padding-left: 10px;
-    color: #666;
-}
-.nt_quick ul li:hover a:before {
-    position: absolute;
-    top: 19px;
-    left: 5px;
-    content: '';
-    background-color: #333;
-    width: 5px;
-    height: 1px;
-}
-.nt_quick ul li:last-child a {
-    border-bottom: none;
-} */
-
-
-
-@media screen and (max-width: 991px) {
-    
-    .cate_m{
-        display: none;
-    }
-}
-
-
 
 
 
@@ -344,9 +200,11 @@ width: 100%;
 
 
 
-#header .gnb .nav {
+#header .gnb .nav.navbar-fixed-top {
     width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
+    height: 47px;
+    top:56px;
 
 }
 
@@ -354,7 +212,7 @@ width: 100%;
     top: 0;
     background: rgba(255,255,255,0.8);
     margin: 0 auto 5px;
-    padding: 10px 0;
+    
 }
 
 
@@ -369,23 +227,7 @@ width: 100%;
 }
 
 
-#header .gnb .navbar-fixed-top{
-    top:56px
-}
 
-@media screen and (max-width: 991px) {
-    #header .gnb .nav {
-        width: 100%;
-        background-color: transparent;/**/
-    }
-    #header .gnb .nav .logoArea {
-        width: 100%;
-        height: 60px;
-    }
-    #header .gnb .nav .menuArea {
-        width: 100%;
-    }
-}
 
 
 
@@ -422,18 +264,6 @@ width: 100%;
     width: 100%;
 }
 
-@media screen and (max-width: 991px) {
-    .logoArea .logo {
-        text-align: left;/**/
-            padding: 13px 0;
-    }
-    
-    /* .logoArea .logo img {
-        width: auto;
-        height: 40px;
-    } */
-}
-
 
 
 
@@ -454,17 +284,43 @@ width: 100%;
     color: #fff;
 }
 
+
 @media screen and (max-width: 991px) {
+    #header{
+        height: 75px;
+    }
+    #header .gnb {
+        background-color: #fff;/**/
+    }
+    #header .gnb.on {
+        top: 0px;
+    }
+    .topArea_inner {
+        padding: 5px 0px 0;
+    }
+    
+     #header .gnb .nav {
+       display: none;
+    }
+    .logoArea .logo {
+        text-align: left;/**/
+            padding: 13px 0;
+    }
+    #header .gnb .nav .logoArea {
+        width: 100%;
+        height: 60px;
+    }
+    #header .gnb .nav .menuArea {
+        width: 100%;
+    }
     #header .gnb .logoArea .button {
         display: block;
         position: absolute;
         top: 10px;
-        right: 0px;
+        right: 8px;
         border-radius: 2px;
     }
 }
-
-
 
 
 /*****************************************************************
@@ -481,44 +337,17 @@ width: 100%;
 }
 
 
-/* .mainmenu > ul {
-    float: right;
-    width: 100%;
-}
 
-.mainmenu > ul.grid3 > li {
-    width: 33.33%;
-}
-.mainmenu > ul.grid4 > li {
-    width: 25%;
-}
-.mainmenu > ul.grid5 > li {
-    width: 20%;
-}
-.mainmenu > ul.grid6 > li {
-    width: 16.66%;
-}
-.mainmenu > ul.grid7 > li {
-    width: 14.28%;
-}
-.mainmenu > ul.grid8 > li {
-    width: 12.50%;
-}
-.mainmenu > ul.grid9 > li {
-    width: 11.0%;
-}
-.mainmenu > ul.grid10 > li {
-    width: 10.0%;
-} */
 #header .gnb .nav .menuArea {
-    width: 80%;
+    width: 100%;
     position: relative;
     margin: auto;
+    
 }
 #header .gnb .nav .menuArea .grid7{
-    width: 69%;
+    /* width: 64%; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-grow: 0;
     flex-shrink: 0;
     margin: auto;;
@@ -529,55 +358,65 @@ width: 100%;
     height: 400px;
     background-color: #fff;
     position: absolute;
-    top: 44px;
+    top: 50px;
     left: 0;
     display: none;
 }
 
-#header .gnb .nav .menuArea .bg img{
-
-    width: 300px;
+#header .gnb .nav .menuArea .bg .img{
+width: 28%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: url('https://philekorea.kr/default/img/_images/bg/catebg/mp5/sub4/1.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 #header .gnb.on .nav .menuArea .bg{
-    top: 40px;
+    top: 47px;
     background-color: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
-#header .gnb .nav .menuArea ul li a{
-    color: #555;
-}
+
 #header .gnb .nav .menuArea ul .navItem{
     position: relative;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
+    padding: 11px 4%;;
+    /* width: 100%; */
 }
+#header .gnb .nav .menuArea ul .navItem::after{
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid coral;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    
+    transition: transform 250ms ease-in-out;
+}
+
+
 
 #header .gnb .menuArea .navItem .nav_link{
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     display: block;
+    color: #555;
+    height: 100%;
+    line-height: 23px;
 }
 
-/* 1차메뉴 */
-.mainmenu > ul > li {
-    /* position: relative;
-    float: left;
-    border-left: 0px solid #ccc;
-    width: 100%; */
-    /* height: 40px;
-    display: table; */
-    
+#header .mainmenu {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
-/* .mainmenu > ul > li:first-child {
-    border: none;
-} */
-/* .mainmenu > ul > li:hover {
-    background-color: transparent;
-} */
+
 
 /* 1차메뉴 : 개별 */
 .mainmenu > ul > li > a {
@@ -593,7 +432,7 @@ width: 100%;
     padding: 0 3px;
     border-right: 0px solid #fff;/**/
     border-radius: 0px 0px 0px 0px;
-    letter-spacing: -0.5px;/**/
+    letter-spacing: 0.5px;/**/
     font-weight: 500;
     font-size: 18px;
     color: #9c9c9c;
@@ -605,7 +444,6 @@ width: 100%;
 .mainmenu > ul > li.on > a {
     padding-top: 3px;
     color: #031A33;
-    backdrop-filter:blur(10px);
 }
 
 .mainmenu > ul > li.recruit > a{
@@ -613,7 +451,34 @@ width: 100%;
 }
 
 
+/*햄버거 메뉴 버튼*/
 
+.menuArea .three{
+ 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+/*  background-color: #2c3e50;*/
+  color: #ecf0f1;
+  text-align: center;
+    padding-top: 5px;
+
+}
+
+.menuArea .hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: #ff7d4d;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuArea .hamburger:hover{
+  cursor: pointer;
+}
 
 
 
@@ -622,7 +487,7 @@ width: 100%;
 .submenu {
     display: none;
     position: absolute;
-    top: 44px;/**/
+    top: 52px;/**/
     left: 0px;
     width: 100%;
     padding-top: 0px;/**/
@@ -643,9 +508,9 @@ width: 100%;
     word-break: break-all;
     white-space: nowrap;
     overflow: hidden;
-    letter-spacing: -0.0px;/**/
+    letter-spacing: -0.05px;/**/
     font-weight: 500;
-    font-size: 14px;
+    font-size: 14.5px;
     color: #555;
     font-family: 'Roboto', sans-serif;
 }
@@ -657,9 +522,28 @@ width: 100%;
 }
 
 #header .gnb.on .submenu{
-    top:40px;
+    top:50px;
 }
 
+
+/*서브 메뉴 내부  depth 메뉴 */
+
+.submenu div .depth-menu{
+   
+}
+.submenu div > .depth-menu a{
+    font-size: 13px;
+    color: #4e4b5c;
+     height: 33px;
+    line-height: 33px;
+    
+}
+
+
+.target_bar{
+    position: absolute;
+    border: 4px solid transparent;
+}
 
 /* *********************************************************** ****카테고리 CSS
 *************************************************************** */
@@ -667,29 +551,45 @@ width: 100%;
 
 
 .cate_g{
+    width: 100%;
+  
+    position: fixed;
+    left: 0px;
+    top: 67px;
+    box-sizing: border-box;
     display: none;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
+
 .cate{
     position: absolute;
-    top: 44px;
-    left: -111%;
-    width: 1522px;
+    top: 40px;
+    left: 0;
+    /* width: 1523px; */
+   width: 100%;;
     box-sizing: border-box;
     padding-top: 0px;
     z-index: 103;
     border-top:none;
     display: flex;
     background: #ffffff;
-    height: 417px;
+    height: 472px;
     overflow: hidden;
-    
+    /* transform: translateX(-10%); */
 }
 
-#header .gnb.on .cate{
-    top:40px;
+
+#header .gnb.on .cate_g{
+    top:7px;
+}
+#header .gnb.on .cate{  
     background-color: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
 }
+
+
+
+
 
  /***********************************************************
                          **** 1차 카테고리 CSS
@@ -697,7 +597,7 @@ width: 100%;
 .cate_g.n_tab .nav-tabs.cate1{
     border-bottom: none;
     border-right: 1px solid #f2f2f2;
-    width: 28%;
+    width: 34%;
     background-color: #f2f2f2;
     margin-bottom: 0 !important;
     flex-direction: column;
@@ -712,7 +612,7 @@ width: 100%;
 .cate_g.n_tab .cate .cate1 li.cate_li > a{
     display:block;
     white-space: nowrap;
-    height: 33px;
+    height: 30px;
    padding-left: 5px;
     width: 100%;
     text-align: left;
@@ -728,7 +628,7 @@ width: 100%;
     color: #555;
     font-size: 15px;
     font-weight: 500;
-    line-height: 33px;
+    line-height: 30px;
     font-family: 'Roboto', sans-serif;
     padding-left: 15px;
 }
@@ -738,69 +638,80 @@ width: 100%;
     top: 30px;
     right: 5px;
 }
-******** 
- 
 
+ 
 
 /**********************************************************
                         2차 카테 CSS                         
 *************************************************************/
 
 .cate_g.n_tab .cate .cate2{
-    width: 72%;
+    width: 100%;
     background-color:transparent;
     height: fit-content;
 }
 .cate_g.n_tab .cate .cate2 .tab-pane{
     position: relative;
     width: 100%;
-    overflow: hidden;    
+      
 }
 .cate_g.n_tab .cate .cate2 .tab-pane >ul{
-   padding-left: 10px;
-    float: left;
-    width: 100%;
+    width: 46%;
 }
 
 .cate_g.n_tab .cate .cate2 .img{
-   width: 50%;
-   position: relative;
-    float: right;
+   position: absolute;
+    top: 0;
+    right: 0;
+    filter: opacity(0.8);
+    height: 472px;
+   
 }
 
-.cate_g.n_tab .cate .cate2 .img span{
-    display: block;
+.cate_g.n_tab .cate .cate2 .img img{
     height: 100%;
-    width: 405px;
-    position: relative;
-        
-}
-.cate_g.n_tab .cate .cate2 .img span:first-child{
-    opacity: 1;
 }
 
 .cate_g.n_tab .tab-content > div > ul > li.cate_li{
     border-bottom: 1px solid #f1f1f1; 
     z-index: 10;
-    height: 33px;
     position: relative;
 }
 
 .cate_g.n_tab .tab-content > div > ul > li.cate_li > a{
     font-weight: 500;
     display: block;
-    font-size:14px; 
+    font-size:14.5px; 
     font-family: 'Roboto', sans-serif;
-    line-height: 33px;
-    padding-left: 10px;
+    line-height: 34px;
+    padding: 5px 7px;
+    height: 100%;
 }
 
-
+.cate_g.n_tab .cate .cate2 .tab-pane >ul.neb{
+    overflow: hidden;
+    width: 66%
+}
+.cate_g.n_tab .cate .cate2 .tab-pane >ul.neb >li{
+    width: 37%;
+    float: left;
+    margin-right: 5px;
+    height: 44px;
+}
+.cate_g.n_tab .cate .cate2 .tab-pane >ul.neb >li> a{
+    line-height: 16px;
+    padding-top: 7px;
+}
 /**********************************************
 
 hover or mouse on
 
 **************************************************/
+
+#header .gnb .nav .menuArea ul .navItem:hover::after{
+    transform: scaleX(1);
+}
+
 .cate .cate1 > li.active,
 .cate .cate1 > li.active>a,
 .cate .cate1 > li.active>a:focus,
@@ -821,24 +732,59 @@ hover or mouse on
     
 }
 .cate .cate1 > li.active > a > .a_box{
-     width: 11px;
+  width: 11px;
   height: 11px;
   left: 95%;
   margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(45deg);
+  -webkit-transform:rotate(45deg);
   border-left: none;
   border-top:2px #fff solid;
   border-right: 2px #fff solid;
   border-bottom: none;
-    animation: arrow 2s forwards; 
+  animation: arrow 2s forwards; 
 }
 
-.cate_g.n_tab .tab-content > div > ul > li.cate_li :hover{
-    background: #001632;
+.cate_g.n_tab .cate .cate2 .tab-pane >ul >li:hover a{
+   background: #001632; 
+   color:white!important;
 }
-.cate_g.n_tab .tab-content > div > ul > li.cate_li a:hover{
-    color: #ffffff;
+
+@media all and (max-width:1599px){
+   
+    .cate_g.n_tab .nav-tabs.cate1{
+        width: 44%;;
+    } 
+    .cate_g.n_tab .cate .cate2 .tab-pane >ul.neb{
+        width:100%;
+    }
+.cate_g.n_tab .cate .cate2 .tab-pane >ul.neb >li{
+    width: 48%;
+    height: 38px;
 }
+    .cate_g.n_tab .cate .cate2 .img{
+        filter: opacity(0.4)blur(2px);
+    }
+    .cate_g.n_tab .tab-content > div > ul > li.cate_li > a{
+        font-size: 13.5px;
+    }
+    .cate_g.n_tab .cate .cate2 .tab-pane >ul.neb >li > a{
+        padding-top: 0;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+   
+    #header .gnb .nav .menuArea .grid7{
+        width: 88%;
+    }
+   
+    #header .gnb .menuArea .navItem .nav_link{
+        font-size: 15px;
+    }
+}
+
+
 
 @keyframes arrow{
     0%{
@@ -853,137 +799,19 @@ hover or mouse on
 }
 
 /*****************************************************************
-모바일 : 991px이하 > 카테고리메뉴
-*****************************************************************/
-@media screen and (max-width: 991px) {
-    
-    /* 모바일 : 991px이하 > 카테고리메뉴  1차메뉴 */
-    #header .gnb .nav .mainmenu {
-        display: none;
-        position: absolute;
-        width: 100%;/* 70%, 100% */
-        padding-top: 0px;
-        opacity: 0.95;/**/
-        right: 0px;
-    }
-    #header .gnb .nav .mainmenu > ul {
-       /* max-height: 500px;*/
-        overflow: auto;
-        margin-top: 1px;
-
-    }
-    #header .gnb .nav .mainmenu > ul > li {
-        width: 100%;
-        height: 45px;
-        margin-top: 0px;/**/
-    }
-    #header .gnb .nav .mainmenu > ul > li:last-child {
-        border-bottom: 1px solid #ddd;
-    }
-    #header .gnb .nav .mainmenu > ul > li > a {
-        display: block;
-        background-color: #333;/**/
-        height: 45px;
-        line-height: 45px;
-        margin: 0px 0 0;/**/
-        padding: 0px;
-        border-right: 0px solid #fff;
-        border-radius: 0;
-        font-size: 1.0em;
-        color: #fff;
-    }
-    #header .gnb .nav .mainmenu > ul > li:hover > a,
-    #header .gnb .nav .mainmenu > ul > li.on > a {
-        background-color: #111;/**/
-        border-top: 0px;
-    }
-    .mainmenu > ul > li:hover > a:before,
-    .mainmenu > ul > li.on > a:before {
-        display: none;
-    }
-    
-    
-    /* 모바일 : 991px이하 > 카테고리메뉴 2차메뉴 */
-    #header .gnb .nav .mainmenu > ul > li .submenu {
-        position: relative;
-        top: 0px;
-        left: 0px;
-        padding: 0;
-        height: auto!important;
-        padding-top: 0px;
-        border: none;
-    }
-    #header .gnb .nav .mainmenu > ul > li .submenu a {
-        height: 40px;
-        line-height: 40px;
-        background-color: #fff;
-        font-size: 14px;
-        color: #333;
-    }
-    #header .gnb .nav .mainmenu > ul > li .submenu a:hover {
-        color: #333;
-    }
-    
-    #header .gnb .mainmenu {
-        -webkit-transition: none;
-        transition: none;
-    }
-    #header .gnb .mainmenu.on {
-        padding-right: 0px;
-        -webkit-transition: none;
-        transition: none;
-    }
-    #header .gnb .mainmenu .cate_m{
-        display:none;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    #header .gnb .nav .mainmenu {
-        display: block !important;
-        position: relative;
-    }
-}
-
-/**/
-@media screen and (max-width: 1199px) {
-    .mainmenu > ul > li > a {
-        font-size: 1.3em;
-    }
-    
-}
-
-
-
-
-
-/*****************************************************************
 상단영역 리사이즈 : .topArea, .nav
 *****************************************************************/
-@media screen and (max-width: 1299px) {
-    #header .gnb .topArea,
-    #header .gnb .nav {
-        /*max-width: 1170px;*/
-    }
-}
+
 
 @media screen and (max-width: 1199px) {
     /*#header .gnb .topArea,*/
     #header .gnb .nav {
         max-width: 970px;
     }
-    .cate{
-        background: rgba(255,255,255,0.8);
-        border: none;
     
-}
-
-    
-    
+        
     /*  상단영역 리사이즈 : .topArea, .nav  1차 */
     
-
-
 
     .cate_g.n_tab .nav-tabs > li > a{
     height: 28px!important;
@@ -1000,8 +828,7 @@ hover or mouse on
     }  
     
     
-    
-    
+  
  /* 상단영역 리사이즈 : .topArea, .nav 2차*/ 
     
     .cate_g.n_tab .cate .cate2{
@@ -1039,55 +866,28 @@ hover or mouse on
    /* #header .gnb .topArea,*/
     #header .gnb .nav {
         max-width: 750px;
-        padding: 0 15px;
-
+        padding: 0 15px;   
     }
     #header .nt_search, #header .nt_login{
-        display: none;
+        display: none; 
     }
-    
-
-#header .topArea{
+    #header .topArea{
     border: none;
-}
-
-}
-
-
-
-@media screen and (max-width: 620px){
-
-    .nt_phone div .nt_phone_mail{
-       display: none;
     }
-    .nt_phone div{
-        border: none;
-        width: 25px;
-    }
-}
+};
 
-@media screen and (max-width: 450px) {
-    /*.nt_search{
-        display: block;
-    }*/
-    /*.nt_search dl dd input[type=text]{
-        width: 100px !important;
-    }*/
-    .nt_login li{
-        width: 70px;
-    }
-    .nt_login li a{
-        width: 70px;
-        font-size: 0.5em;
-    } 
-}
 
-@media screen and (max-width: 400px) {
-    #header .gnb .topArea,
-    #header .gnb .nav {
-       max-width: 400px;
-    }
-}
+
+
+
+
+/*****************************************************************
+모바일 : 991px이하 > 카테고리메뉴
+*****************************************************************/
+
+
+
+
 
 
 
@@ -1166,21 +966,12 @@ hover or mouse on
     }
 }
 
-/*
-.nt_imgArea .con p {
-    display: block;/* 사용값 : none, block 
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0px 15px 0;
-    text-align: right;
-    font-size: 0.750em;
-   font-weight: 100;
-    color: rgba(255, 255, 255, 0.2);
-}*/
+
 .nt_imgArea .con .seminar{
     color:#fbfbe6;
     font-size: 1.0em;
 }
+
 
 @media screen and (max-width: 991px) {
     .nt_imgArea {
@@ -1193,6 +984,30 @@ hover or mouse on
         display: none;
     }
 }
+
+
+@media screen and (max-width: 991px) {
+    .n_position {
+        display: none;
+    }
+}
+
+
+/* 내용영역 */
+@media screen and (max-width: 991px) {
+    .n_contents > .container > .row > div {
+        width: 100%;
+    }
+    
+    /* 페이지메뉴 숨김 */
+    .n_contents > .container > .row > div.col-sm-3 {
+        display: none;
+    }
+    .n_contents > .container > .row > div.col-sm-3 > .pageMenu {
+        max-width: 100%;
+    }
+}
+
 
 
 
@@ -1219,15 +1034,6 @@ hover or mouse on
 .n_contents {
     margin: 0px 0 50px;/**/
 }
-
-@media screen and (max-width: 991px) {
-    .n_position {
-        display: none;
-    }
-}
-
-
-
 
 
 
@@ -1332,20 +1138,6 @@ hover or mouse on
      color: blueviolet;
 }
 
-/* 내용영역 */
-@media screen and (max-width: 991px) {
-    .n_contents > .container > .row > div {
-        width: 100%;
-    }
-    
-    /* 페이지메뉴 숨김 */
-    .n_contents > .container > .row > div.col-sm-3 {
-        display: none;
-    }
-    .n_contents > .container > .row > div.col-sm-3 > .pageMenu {
-        max-width: 100%;
-    }
-}
 
 
 
@@ -1370,13 +1162,12 @@ hover or mouse on
     display: none;
 }
 
+
 @media screen and (max-width: 991px) {
     .left_banner {
         display: none;
     }
 }
-
-
 
 /*****************************************************************
 서브페이지 > 셀렉트
@@ -1472,8 +1263,6 @@ hover or mouse on
 
 
 
-
-
 /****************************************************************
 de_module > .product_img / de_module > .video
 *****************************************************************/
@@ -1509,6 +1298,19 @@ de_module > .product_img / de_module > .video
     clear: both;
 }
 
+@media screen and (max-width:500px) {
+            #n_footer {
+                text-align: center;
+                font-size: 0.5em;
+            line-height: 15px;}
+            #n_footer .sec01 .sec01_01 ul li{
+                padding: 0;
+                width: 25%;
+            }
+            #n_footer .sec01 .sec01_02 .ns_link .form-group select{
+                display: none;
+            }
+}
 
 /*****************************************************************
 공통하단 : sec01 : 영역
@@ -1585,6 +1387,7 @@ de_module > .product_img / de_module > .video
     color: #eee;
 }
 
+
 @media screen and (max-width: 991px) {
     #n_footer .sec01 .sec01_02 ul {
         float: left;
@@ -1593,7 +1396,6 @@ de_module > .product_img / de_module > .video
         margin: 5px 5px 5px 0;
     }
 }
-
 
 
 
@@ -1650,28 +1452,11 @@ de_module > .product_img / de_module > .video
 /*    display: none;*/
 }
 
-@media screen and (max-width:500px) {
-            #n_footer {
-                text-align: center;
-                font-size: 0.5em;
-            line-height: 15px;}
-            #n_footer .sec01 .sec01_01 ul li{
-                padding: 0;
-                width: 25%;
-            }
-            #n_footer .sec01 .sec01_02 .ns_link .form-group select{
-                display: none;
-            }
-}
 
 
 
 
-/*****************************************************************
-공통하단 : sec02 > sec02_02 : QUICK LINK
-*****************************************************************/
-#n_footer .sec01 .sec01_02 .ns_link {
-}
+
 #n_footer .sec01 .sec01_02 .ns_link h3 {
     font-size: 1.0em;
     font-weight: 500;
@@ -1774,41 +1559,6 @@ de_module > .product_img / de_module > .video
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-/*
-.nt_sns li img.on {
-    opacity: 1.0;
-    transform: rotate(30deg);
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-*/
-
-/************************************************************
-공통하단 : sec02 > sec02_03 : BANK INFO(계좌번호)
-************************************************************/
-#n_footer .sec02 .sec02_03 .ns_bank {
-    margin-bottom: 25px;
-}
-#n_footer .sec02 .sec02_03 .ns_bank h3 {
-    font-size: 1.0em;
-    font-weight: 400;
-    color: #222;
-    padding: 5px 0;
-    font-family: 'Roboto', sans-serif;
-}
-#n_footer .sec02 .sec02_03 .ns_bank ul li {
-    font-size: 0.875em;
-    line-height: 140%;
-    letter-spacing: 2px;
-    color: #888;
-}
-#n_footer .sec02 .sec02_03 .ns_bank ul li span {
-    letter-spacing: 0px;
-    padding-right: 1px;
-    vertical-align: top;
-    color: #555;
-}
-
 
 
 
@@ -1841,101 +1591,86 @@ de_module > .product_img / de_module > .video
     color: #fff;
 }
 
+
 /*****************************************************************
-기타 > 세미나 아이콘
+카테 상단배너
 *****************************************************************/
-
-
-#seminar {
-    text-align: center;
-    position: fixed;
-    z-index: 100;
-    bottom: 80px;
-    right: 13px;
-    border-radius: 50%;
-    background: #001632;
-}
-
-
-#seminar a {
-    display: block;
-    width: 60px;
-    height: 60px;
-    font-size: 1.0em;
-    line-height: 60px;
-    color: #aaa;
-    font-family: 'Roboto', sans-serif;
-}
-
-
-
-
-
-/******************************************************************
-메인 페이지 인디케이터
-**********************************************************************/
-
-#indicator{
-    position: fixed;
-    top: calc(50% - 80px);
-    right: 5px;
-     z-index: 10000;
-     display:none;
-}
-
-#indicator .indi_g{
-    width: 130px;
-    height: 160px;
-    z-index: 10000;
-}
-
-#indicator .indi_g a{
-    display: block;
-    text-align: center;
-    padding: 5px 5px;
-    font-size: 1.1em;
-    font-weight: 400;
-    color: #aaa;
-    position: relative;
-}
-
-
-#indicator .indi_g a> .indi{
-    display: block;
-    width: 0px;;
-    height: 25px;
-    background: #001632;
-    border-radius: 15px;
-    position: absolute;
-    top: 4px;;
-    left: 0;
-}
-#indicator .indi_g a:hover{
-    color: #ddd;
-}
-
-#indicator .indi_g a .indi.act{
-    width: 100%;
-    transition: 0.5s;
-    z-index: -1;
-}
-
-
-@media screen and (max-width:991px){
-    #indicator{
-        display: none;
-    }
-}
-
 .cat_banner_tit{
     color: #fff;
-    font-size: 3em;
 }
 
 .cat_banner_subtit{
-    color: #f4f4f4;
-    font-size: 2em;
+    color: #efefef;
+    font-size: 1.8rem;
+}
+
+/*******************************************
+샘플 신청 버튼
+*******************************************/
+.sample_request{
+    display: none;
+ border-radius: 50%;
+  height: 118px;
+    position: relative;
+    width: 118px;
+   box-shadow:  2px 1px 7px 0px #d2d2d2;
+   
+}
+.sample_request.on{
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 9%;
+    z-index: 100;
+    
+}
+
+.sample_request:hover{
+    transform-origin:59px;
+    transform: scale(1.4);
+    transition: 0.5s ease-out;
 }
 
 
+.sample_request a{
+   border-radius: 50%;
+ color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 118px;
+    height: 118px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 23%;
+    background: #fff;
+    transform: scale(0.9);
+}
+.sample_request .sample_bg{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    border: 7px solid transparent;
+    border-color: #ff7d4d #fff #fff #fff;
+    transform-origin: 50% 50%;
+    animation: rotate-loading 1.5s linear 0s infinite normal;
+}
+ 
 
+@keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-o-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}

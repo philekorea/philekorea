@@ -33,6 +33,13 @@
 
 
 /*상단*/
+#header  .topArea_inner {
+   /* float: right;*/
+    /*padding: 5px 0;*/
+    /* display: flex;
+    max-width: 1325px;
+    margin: auto; */
+}
 
 .topArea {
     width: 100%;
@@ -856,6 +863,7 @@ hover or mouse on
 /*****************************************************************
 모바일 : 991px이하 > 카테고리메뉴
 *****************************************************************/
+
 @media screen and (max-width: 991px) {
     
     /* 모바일 : 991px이하 > 카테고리메뉴  1차메뉴 */
@@ -1134,5 +1142,33 @@ de_module : 디자인모듈
 }
 
 */
+/************************************************************
+공통하단 : sec02 > sec02_03 : BANK INFO(계좌번호)
+************************************************************/
+#n_footer .sec02 .sec02_03 .ns_bank {
+    margin-bottom: 25px;
+}
+#n_footer .sec02 .sec02_03 .ns_bank h3 {
+    font-size: 1.0em;
+    font-weight: 400;
+    color: #222;
+    padding: 5px 0;
+    font-family: 'Roboto', sans-serif;
+}
+#n_footer .sec02 .sec02_03 .ns_bank ul li {
+    font-size: 0.875em;
+    line-height: 140%;
+    letter-spacing: 2px;
+    color: #888;
+}
+#n_footer .sec02 .sec02_03 .ns_bank ul li span {
+    letter-spacing: 0px;
+    padding-right: 1px;
+    vertical-align: top;
+    color: #555;
+}
+
+
+
 
 

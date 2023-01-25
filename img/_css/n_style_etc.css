@@ -497,12 +497,6 @@
 
 
 
-
-
-
-
-
-
 /*****************************************************************
 하단영역 : 이용안내
 *****************************************************************/
@@ -583,19 +577,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
 /*****************************************************************
 게시판 공유하기
 *****************************************************************/
-.link-icon { position: relative; display: inline-block; width: auto;    font-size: 14px; font-weight: 500; color: #333; margin-right: 10px; padding-top: 50px; }
+.link-icon { 
+    position: relative;
+    display: inline-block;
+    width: auto; 
+    font-size: 14px; font-weight: 500; color: #333; margin-right: 10px; padding-top: 50px; }
 .link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; }
 .link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat; } 
 .link-icon.kakao { background-image: url(./images/icon-kakao.png); background-repeat: no-repeat; }
@@ -1775,7 +1764,9 @@
     z-index: 10;
 }
 @media screen and (max-width:991px){
-    #sticky{top:101px;}
+    #sticky{
+        display: none;
+    }
 }
 
 .sticky .st_list{
@@ -1789,10 +1780,6 @@
     text-align: center;
 }
 
-@media screen and (max-width:442px) {
-    .sticky .st_list{font-size: 10px;}
-    .sticky .st_list li a{padding:7px 10px;}
-}
 
 .sticky .st_list li{
     flex:1;
@@ -1800,10 +1787,10 @@
     background: #001632;
     text-align: center;
 }
-.sticky .st_list.non_spec li:nth-child(2){
+.sticky .st_list.no_spec li:nth-child(2){
     display: none;
 }
-.sticky .st_list.non_rel li:nth-child(4){
+.sticky .st_list.no_rel li:nth-child(4){
     display: none;
 }
 .sticky .on{display: none;}
@@ -1965,129 +1952,8 @@ n_table : 기본테이블
 
 
 
-/*****************************************************************
-쇼핑몰 : 검색결과 페이지
-*****************************************************************/
-.nt_imgArea_shop {
-/*    height: 250px;*/
-}
-.nt_productresult {
-/*    border: 1px solid #f00;*/
-}
-
-.nt_productresult .product_result_txt {
-    font-size: 1.125em;
-}
-.nt_productresult .product_result_txt .highlight {
-    font-size: 2.0em;
-    color: #111;
-}
-
-/**/
-.nt_productresult .box1 {
-    overflow: hidden;
-    margin: 20px 0 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-.nt_productresult .box1 .bx_center {
-    overflow: hidden;
-    padding: 10px;
-/*    border: 1px solid #f00;*/
-}
-
-.nt_productresult .bx_product_result .no_result {
-    margin: 0px;
-    height: 30px !important;
-/*    border: 1px solid #f00;*/
-}
-.nt_productresult .bx_product_result .more_result,
-.nt_productresult .bx_product_result .more_result2 {
-    width: 100%;
-    border: 0px;
-    padding: 10px 0 0;
-    font-size: 1.0em;
-}
-
-.nt_productresult .bx_product_result .more_result{
-    margin-bottom: 250px;
-}
-
-.nt_productresult .bx_product_result .result_product {
-    cursor: pointer;
-    padding: 3px 0 0 15px !important;
-    width: 30%;
-    height: 30px;
-}
 
 
-.nt_productresult .bx_product_result .text {
-    width: 200px;
-    height: 32px;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-
-/* 검색상품목록 */
-.nt_productresult .n_result_list {
-    margin: 50px 0 0;
-}
-.nt_productresult .result_list th {
-    height: 40px;
-}
-.nt_productresult .bx_product_result .range {
-    width: 100% !important;
-    border: none;
-}
-
-.nt_productresult .n_result_list .subject img{border-bottom:1px solid #cbcbcb;}
-
-
-.nt_productresult .result_list .txt_info{cursor: pointer;}
-
-
-@media screen and (max-width: 500px){
-    .nt_productresult .product_result_txt{
-        font-size: 1em;
-        text-align: left;
-    }
-    .nt_productresult .box1{
-        margin: 5px 0 0;
-        padding: 10px;
-    }
-
-    .nt_productresult .n_result_list{
-        margin: 30px 0 0;
-    }
-    .nt_productresult .bx_product_result .more_result2{
-        padding: 0;
-        margin: 0 auto;
-    }
-    .nt_productresult .bx_product_result .more_result2 input{
-        width: 70%;
-    }
-    .nt_productresult .bx_product_result .result_product {
-        width: 75%;
-    }
-    .nt_productresult .result_list th{
-        
-    }
-    .nt_productresult .result_list th:last-child{
-        display: none;
-    }
-    .result_list .subject{
-        height: 120px;
-        padding: 0 !important;
-        display: flex;
-    }
-    .result_list .txt_info{
-        height: 30px !important;
-        padding: 20px 0 0 15px!important;
-        margin: 5px !important;
-        width: 50% !important;
-    }
-}
 
 
 

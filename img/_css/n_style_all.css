@@ -2,9 +2,9 @@
 
 @import url('./n_fonts.css');
 @import url('./animate.min.css');
-@import url('./swiper.min.css');
+/*@import url('./swiper.min.css');*/
 @import url('./n_style_reset.css');
-@import url('./n_style_reset.css');
+@import url('./mall_style.css');
 @import url('./n_style_layout.css');
 @import url('./n_style_pagelayout.css');
 @import url('./n_style_etc.css');
@@ -12,3 +12,4 @@
 @import url('./n_style_ms.css');
 @import url('./n_style_user.css');
 @import url('./index.css');
+

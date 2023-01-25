@@ -262,11 +262,25 @@ ms08 : 3단형
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.3);
-    
     width: 100%;
     height: 100%;
 }
 
+.ms08 .new_more{
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    left: calc(50% - 80px);
+    bottom: 25px;
+    
+    
+}
 
 
 /*****************************************************************
@@ -1095,7 +1109,7 @@ msGrid02 : 혼합형(지도 + 폼메일or아코디언)
 *****************************************************************/
 /* 제목, 설명 */
 .msGrid02 > .nm_tit > h3 {
-    color: #ccc;
+    color: #fff;
 }
 .msGrid02 > .nm_tit > p {
     color: #aaa;

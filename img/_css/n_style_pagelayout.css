@@ -96,7 +96,10 @@
     justify-content: center;
     padding-top: 70px;   
 }
-@media screen and (max-width: 720px) {#detail .content div .tableArea .manual_box .img{display: block;}
+@media screen and (max-width: 720px) {
+    #detail .content div .tableArea .manual_box .img{
+        display: block;
+    }
 }
 
 #detail .content div .tableArea img{
@@ -241,13 +244,20 @@
 
 #detail .content #menu2 .table table{font-size: 15px ;}
 
-#detail .content #menu2 .table .spec_p{width: 80%; margin: 0 auto; padding: 10px 5px ; font-weight: 600; font-size: 18px; border-bottom: 2px solid black;}
+#detail .content #menu2 .table .spec_p{
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 10px 5px ; 
+    font-weight: 600; 
+    font-size: 18px; 
+    border-bottom: 2px solid black;
+}
 #detail .content #menu2 .table{
-    width: 100%;    padding-top: 100px;
+    width: 100%;   
+    padding-top: 100px;
 }
 #detail .content  #menu2  .table table tbody tr:nth-child(2n){
     background: rgba(236,236,236,0.3);
-    ;
 }
 #detail .content  #menu2  .table table tbody td{
     padding: 10px 5px;
@@ -308,8 +318,8 @@
     border: none;
 }
 
-@media screen and (max-width : 500px) {#detail .content #menu3 .tablett
-    {
+@media screen and (max-width : 500px) {
+    #detail .content #menu3 .tablett{
         width: 100%;
         font-size: 1.3em;
     }
@@ -391,16 +401,6 @@
 #detail .content #menu3 tr th:last-child{
     width: 30%;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -624,6 +624,25 @@
 }
 
 
+#detail .content .tableArea .head_office_btn{
+    margin-top: 30px !important;
+    display: block;
+    margin: 0 auto;
+    background-color: #001632;
+    width: 180px;
+    height: 55px;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+}
+
+#detail .content .tableArea .head_office_btn a{
+    color: #fff;
+    font-size: 16.5px;
+}
+
+
 
 @media screen and (max-width: 720px) {
 
@@ -814,11 +833,10 @@
 
 
 @media screen and (max-width: 500px){
-    #detail .bioptic #menu2 .cartridge th 
-        
-            {padding: 1px;
-        
-    }}
+    #detail .bioptic #menu2 .cartridge th {
+        padding: 1px;
+    }
+}
 
 
 /********myriad*********/
@@ -1275,11 +1293,20 @@ minipcr   transilluminator
 #detail .minipcr.transilluminator #menu1 .tableArea .feature .feature_box:first-child .feature_list li{height:310px; }
 #detail .minipcr.transilluminator #menu1 .tableArea .feature .feature_box:last-child .feature_list li{height:380px; }
 #detail .minipcr .tableArea h3{margin-top: 40px; text-align: center;}
-#detail .minipcr #menu4 .tableArea h3{margin: 50px auto; text-align: left;}
+#detail .minipcr #menu4 .tableArea h3{
+    margin: 50px auto; 
+    text-align: left;
+}
 #detail .minipcr #menu1 .tableArea h4{font-weight:900;}
 #detail .minipcr #menu4 .tableArea h3{color : black;margin: 30px auto;}
 
-#detail .minipcr.transilluminator #menu1 .tableArea .feature_box .feature_list ul{display: flex; align-items: center;justify-content: center;  padding-top: 50px; margin: 0 auto;  }
+#detail .minipcr.transilluminator #menu1 .tableArea .feature_box .feature_list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px; 
+    margin: 0 auto; 
+}
 #detail .minipcr.transilluminator #menu1 .tableArea .feature_box .feature_list li{ margin : 0.5%; width: 300px; float: left;}
 #detail .minipcr.transilluminator #menu1 .tableArea .feature_box .feature_list li .b{margin-bottom: 10px;}
 #detail .minipcr.transilluminator #menu1 .tableArea .feature_box .feature_list li p{padding: 5px 0;}
@@ -1296,7 +1323,12 @@ minipcr   transilluminator
 minipcr   bluebox
 **************************************************/
 #detail .minipcr.bluebox #menu1 .tableArea .feature .feature_box:first-child .feature_list li{width:400px; height: 310px;}
-#detail .minipcr.bluebox  #menu1 .table_group{ width:100%; overflow: hidden; margin: 0 auto;   display: flex; justify-content: center; }
+#detail .minipcr.bluebox  #menu1 .table_group{
+    width:100%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
 #detail .minipcr.bluebox  #menu1 .table_group .table {
     width: 100%;
     float: left;
@@ -2104,10 +2136,29 @@ cavoy**************************************************/
 .inq_bt{ font-size: 20px;background-color: #001632; width: 160px; text-align: center; margin: 20px; 
 }
 
-.inq_bt a{color: #fff;padding : 15px 0; display: block;position: relative;
-    animation: fadeInUp 0.8s;transition: all 0.3s ease-in-out;  }
-    .inq_bt a:hover{background-color: #fff; color: #001632;  transition: all 0.3s ease-in-out;}
-    .inq_bt > a:after { content:""; position: absolute; left: 0; bottom: 0; width: 0; height: 4px; background-color: #001632; transition: all .5s; } 
+.inq_bt a{
+    color: #fff;
+    padding : 15px 0;
+    display: block;
+    position: relative;
+    animation: fadeInUp 0.8s;
+    transition: all 0.3s ease-in-out;
+}
+    .inq_bt a:hover{
+        background-color: #fff; 
+        color: #001632;  
+        transition: all 0.3s ease-in-out;
+}
+    .inq_bt > a:after { 
+        content:"";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0; 
+        height: 4px;
+        background-color: #001632; 
+        transition: all .5s;
+} 
     .inq_bt > a:hover:after { width: 100% } 
 
 
@@ -2161,13 +2212,18 @@ Kyratec**************************************************/
 
 /*********************synthgo****************/
 
+#detail .Synthego{
+    width: 80%;
+    margin: 0 auto;
+}
+
 #detail .Synthego .g{
     color: #3cae4c;
     text-align: center;
 }
 
 #detail .Synthego #menu1{
-    background:none;
+    background: none;
 }
 
 #detail .Synthego #menu1 .img.logo{
@@ -2195,7 +2251,6 @@ Kyratec**************************************************/
     width: 100%;
     margin: 10px 0;
     position: relative;
-    
 }
 #detail .Synthego #menu1 .feature_list ul .li2> .img_box .img{
     padding: 0;
@@ -2261,9 +2316,12 @@ Kyratec**************************************************/
     margin: 20px 0;
 }
 
+#detail .Synthego #menu2 img:not(.list_back_img){
+    width: 60%;
+}
+
 
 /*********************************  transomic *********************************/
-
 #detail .transomic #menu1, #detail .transomic #menu2{
     background:none;
 }
@@ -2909,15 +2967,7 @@ Kyratec**************************************************/
     padding-top: 20px;
 }
 
-/*#detail .content.tempus.xf #menu2 h4{
-    text-align: center;
-    padding: 5px 0;
-}
 
-#detail .content.tempus #menu3 .table h4{
-    margin-top: 30px;
-    margin-bottom: 10px;
-}*/
 
 
 #detail .content.tempus.xf #menu3 .tempus_flex div:first-child{
