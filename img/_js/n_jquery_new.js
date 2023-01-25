@@ -19,8 +19,22 @@ wrap: true,
 keyboard : true
 });
     
+
+//햄버거 메뉴 //
+     $(".grid7 .three").click(function(){
+         
+    $("html,body").addClass('hidden_scroll');     
+       $('.all_menu').stop().slideDown();
+                 
+  });
     
+    $('.wrap .close_button').click(function(){
+        $('.all_menu').stop().fadeOut();
+         $("html,body").removeClass('hidden_scroll');     
+       
+    })
     
+//    
     
     
     
@@ -29,16 +43,21 @@ keyboard : true
     var gnbHeight = $(gnb).height();
     
     $(window).scroll(function () {
+         
         //        var windowHeight = $(this).height();
         if ($(this).scrollTop() > gnbHeight - 10) {
             gnb.addClass('on');
             gnb.find('.mainmenu').addClass('on');
-            $('.nt_sitemap').addClass('on');
-           
+//            $('.nt_sitemap').addClass('on');
+             $('#indicator').stop().fadeIn();
+             $('.scrollToTop').stop().fadeIn();
         } else {
             gnb.removeClass('on');
             gnb.find('.mainmenu').removeClass('on');
-            $('.nt_sitemap').removeClass('on');
+//            $('.nt_sitemap').removeClass('on');
+            
+  $('#indicator').stop().fadeOut();
+                  $('.scrollToTop').stop().fadeOut();
            
         }
     });
@@ -47,12 +66,12 @@ keyboard : true
         if ($(this).scrollTop() > gnbHeight - 10) {
             gnb.addClass('on');
             gnb.find('.mainmenu').addClass('on');
-            $('.nt_sitemap').addClass('on');
+//            $('.nt_sitemap').addClass('on');
             
         } else {
             gnb.removeClass('on');
             gnb.find('.mainmenu').removeClass('on');
-            $('.nt_sitemap').removeClass('on');
+//            $('.nt_sitemap').removeClass('on');
             
         }
     }
@@ -67,6 +86,7 @@ keyboard : true
             $('.bg').stop().slideDown(300)
             $('.submenu').stop().slideDown(300)
             $('.cate_g').stop().slideUp(200);
+           
                  
         },
         click: function () {
@@ -84,26 +104,95 @@ keyboard : true
         }
     });
     
-    $('.menuArea .bg, #header').mouseleave(function(){    
+    $('.menuArea .bg, #header, .menuArea .cate_g .cate').mouseleave(function(){    
             $('.submenu').stop().slideUp(300)
             $('.bg').stop().slideUp(300)
+            $('.cate_g').stop().slideUp(300)
                  
     })
     
     /**/
     $('.cate_m').on({
         mouseover: function () {
-            $(this).find('.cate_g').stop().slideDown(200);
-             $('.submenu').stop().slideUp(300)
-            $('.bg').stop().slideUp(300)
-        },
-        mouseout: function () {
-            $(this).find('.cate_g').stop().slideUp(200);
+            $(this).find('.cate_g').stop().slideDown(400);
+        
+             $('.submenu').stop().slideUp(300);
+            $('.bg').stop().slideUp(300);
         }
     });
 
+    
 
 
+    //메인 페이지 인디 //
+// function main_m(){
+//     let indi = $('#fp-nav.left li');
+//     let main_contents =$('#module_contents > .section');
+    
+//     $(indi).click(function(x){
+        
+//         x.preventDefault();
+//         let idx = $(this).index();
+//         let content_i = $(main_contents).eq(idx)
+//         let sectionDistance = $(content_i).offset();
+//        console.log(idx)
+        
+//        $('html,body').stop().animate({scrollTop:sectionDistance.top});
+//         $(this).addClass('active');
+//         $(indi).not(this).removeClass('active');
+//     })
+    
+//     $(window).scroll(function(){
+//         $(main_contents).each(function(){
+//             if($(this).offset().top<= $(window).scrollTop()){
+//                 $('#indicator').stop().fadeIn();
+//                  $('.scrollToTop').stop().fadeIn();
+//                 $(indi).addClass('active').siblings().removeClass('active');
+//                 var idx= $(this).index();
+//                 $(indi).removeClass('active');
+//                 $(indi).eq(idx).addClass('active');
+               
+//             }else if( $(window).scrollTop()<250){
+//                  $('#indicator').stop().fadeOut();
+//                 $('.scrollToTop').stop().fadeOut();
+//             }
+//         })
+//     })    
+    
+// }  
+
+$(window).on('scroll', function() {   
+            if ($(window).scrollTop() > 900  ) {
+                $('.sample_request').addClass("on");
+            }else if($(window).scrollTop() > 3955 || $(window).scrollTop() < 899) {
+                $('.sample_request').removeClass("on");
+            }
+        })
+
+
+
+
+
+//스크롤 탑
+   
+    $('.scrollToTop').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+    
+   
+
+
+    
+    //모바일
+    
+    $('.m_menu .s_menu_li').mouseenter(function(){
+    let m_menu_index = $(this).index();
+    $('.m_menu_list .list_box').eq(m_menu_index).addClass('active');
+    $('.m_menu_list .list_box').not($('.m_menu_list .list_box').eq(m_menu_index)).removeClass('active');
+})
 
     /**/
     /*$('.nt_shop').on({
@@ -124,6 +213,9 @@ keyboard : true
     });*/
     /**/
     
+    
+    
+    
     /*creoptix reference*/
     
     $('#detail .creoptix .btn').click(function(){
@@ -138,11 +230,11 @@ keyboard : true
     })
 
     $('#detail .denovix .btn').click(function(){
-        let has_refe = $('.moreinfo').hasClass('show');
+        let has_info = $('.moreinfo').hasClass('show');
         
-        if(has_refe){
+        if(has_info){
             $('.moreinfo').removeClass('show');
-        }else if(!has_refe){
+        }else if(!has_info){
             $('.moreinfo').addClass('show');
         }
         
@@ -151,39 +243,20 @@ keyboard : true
     
     
     /**/
-    $('.logoArea p').click(function () {
-        $(this).toggleClass('on');
-        
-        if ($(this).hasClass('on')) {
-            $('.mainmenu').slideDown();
-        } else {
-            $('.mainmenu').slideUp();
-        }
-    });
-    
-//    
-    
-    /*//////메인 페이지 이동*/
-//    const indi_g = document.querySelectorAll('#indicator .indi_g a');
-//    for (const a of indi_g){
-//        a.addEventListener('click',function(){
-//            const scr_P = document.querySelector(this.dataset.target).offsetTop;
-//            let nav_h = document.querySelector('.gnb').offsetHeight;
-//            window.scrollTo({top:scr_P - nav_h, behavior:'smooth'});
-//        })
-//    }
-function main_m(){
-    let indi_g = $("#indicator .indi_g a");
-    $(indi_g).click(function(){
-        const pg_m = $($(this).attr("data-target")).offset().top;
-        $("body,html").animate({
-            scrollTop:pg_m
-        },500);
+//    $('.logoArea p').click(function () {
+//        $(this).toggleClass('on');
+//        
+//        if ($(this).hasClass('on')) {
+//            $('.mainmenu').slideDown();
+//        } else {
+//            $('.mainmenu').slideUp();
+//        }
+//    });
+  
+ 
 
-    })
-}  
-   
-    
+                     
+
 /* 서브페이지 이동 */
     function sub_m(){
      let fix_b = $("#sticky .st_list li a");
@@ -214,35 +287,20 @@ function main_m(){
         let non_spec=$('.content').hasClass('nospec');
         let non_rel =$('.content').hasClass('norel');
 
-        if(non_spec || non_rel){
-            $('.sticky .st_list').addClass('non_spec');
-            $('.sticky .st_list').addClass('non_rel');
-        }else{
-            $('.sticky .st_list').removeClass('non_spec');
-            $('.sticky .st_list').removeClass('non_rel');
+        if(non_spec){
+            $('.sticky .st_list').addClass('no_spec');
+        }if(non_rel){
+            $('.sticky .st_list').addClass('no_rel');
+        }
+        else{
+            $('.sticky .st_list').removeClass('no_spec');
+            $('.sticky .st_list').removeClass('no_rel');
         }
     };
     
    
     
-    /* scrolltop */
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.scrollToTop').fadeIn();
-            $('#indicator').fadeIn();
-                  }else {
-            $('.scrollToTop').fadeOut();
-            $('#indicator').fadeOut();
-        }
-    });
-//    
-    $('.scrollToTop').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-    
+   
 
     /**/
     $('.n_swap').each(function () {
@@ -259,18 +317,10 @@ function main_m(){
         });
     });
 
-
-
-   
-
     /* 툴팁 */
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
-
-
-
-
 
     /* 이미지 확대,축소 */
     // $('.scaleUp').on({
@@ -294,9 +344,6 @@ function main_m(){
     // });
 
 
-
-
-
     /* 효과01 */
     $('.effect01').each(function () {
         $(this).on({
@@ -317,11 +364,6 @@ function main_m(){
             cursor: 'pointer'
         });
     });
-
-
-
-    
-
 
     /* 효과02 */
     $('.effect02').each(function () {
@@ -353,11 +395,6 @@ function main_m(){
         });
     });
 
-
-
-
-
-
     /* 효과03 */
     $('.effect03').each(function () {
         $(this).on({
@@ -379,32 +416,12 @@ function main_m(){
         });
     });
 
-
-
-
-
-
     /* map 지도 : 구글지도 */
     $('.map_google').click(function () {
         $(this).find('iframe').addClass('clicked');
     }).mouseleave(function () {
         $(this).find('iframe').removeClass('clicked');
     });
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
 
 
     /************************************************************
@@ -425,8 +442,6 @@ function main_m(){
     
     /* 카테고리 > 탭버튼형 : 속성 변경(폰트크기) */    
     $('.sul_menu').parent('td').find('font').removeAttr('style', '');
-
-
 
 
     /* 댓글영역 ***********************************************/
@@ -457,11 +472,6 @@ function main_m(){
     /* 댓글영역 : 댓글목록 */
     $('.comment_name').parent().parent().parent().parent().parent().parent().parent().addClass('commentArea');
 
-
-
-
-
-
     /* 텍스트형 : 글목록 : 최상단 라인영역 */
     $('.n_board_txt .bbsno').parents('table').prev().find('td').addClass('board_top_line');
 
@@ -485,12 +495,6 @@ function main_m(){
     $('.paging').parent().parent().parent().prev().css('border', '1px solid #fff');
     $('.paging').parent('tr').next().remove();
     
-    
-    
-
-
-
-
     // 갤러리목록 : 관리자로그인시 게시물체크박스
     $('.n_board_gallery').find('input[name=delete_check_notice\\[\\]]').parent('td').addClass('adminCheck');
 
@@ -506,11 +510,6 @@ function main_m(){
     $('.gallery_etc').css('color', '#fff');
 
 
-
-
-    
-
-
     /* 폼메일 : 항목의 속성 제거 ***********************************************/
     $('.formmail_title_bgcolor font').removeAttr('style');
     /* 개인정보 수집동의 영역 */
@@ -523,10 +522,6 @@ function main_m(){
     $('.formButton a:first-child img').attr('src', '../img/component/board/board_1/confirm.gif');
     /* 폼메일 : 하단버튼영역 : 버튼 : 취소 */
     $('.formButton a:last-child img').attr('src', '../img/component/board/board_1/cancel.gif');
-
-
-
-
 
 
     /* 글쓰기 : 하단버튼영역의 상단여백 */
@@ -545,11 +540,6 @@ function main_m(){
     $('img[src="/cimg/copy.gif"]').attr('src', '../img/component/board/board_1/admin_copy.gif');
 
 
-    
-    
-    
-    
-
     /*****************************************************************
     일정관리
     *****************************************************************/
@@ -558,27 +548,18 @@ function main_m(){
     
 
 
-
-
-
-
     /*****************************************************************
     쇼핑몰 : 페이징
     *****************************************************************/
     $('.tb_font04').parent().siblings('td[width=1]').remove();
     
-    
-    
-    
-    
+     
     /*****************************************************************
     폼메일 공백제거
     *****************************************************************/
 //    $('.np_form td').each(function () {
 //        $(this).html($(this).html().replace(/&nbsp;/gi, ''));
 //    });
-
-
 
 
     /*****************************************************************
@@ -624,22 +605,13 @@ function main_m(){
     
     $(function () {
         contentWayPoint();
-        main_m();
+       
         sub_m();
         detail_tab();
         tab_num();
     });
     
-    
-    /*****************************************************************
-    게시판 sns 공유하기
-    *****************************************************************/
-
-    
-    
-    
-    
-    
+ 
 
 });
 

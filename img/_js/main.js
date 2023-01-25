@@ -1,4 +1,4 @@
-;(function () {
+$(function () {
     
     // animate-box
 	/*var contentWayPoint = function() {
@@ -14,6 +14,7 @@
 		} , { offset: '75%' } );
 
 	};*/
+    
     
     
 
@@ -58,7 +59,7 @@
         })*/
 
 		$(window).scroll(function(event){
-             /*console.log($(this).scrollTop());*/
+//             console.log($(this).scrollTop());
 
 		   	var header = $('#fh5co-header'),
 				scrlTop = $(this).scrollTop();
@@ -325,9 +326,7 @@
 	};
     
     
-   
-
-	
+  
 	
 
 	// Document on load.
@@ -341,7 +340,7 @@
 		testimonialsWayPoint();
 		pricingWayPoint();
 		pressWayPoint();
-        
+       
        
 
 	});
