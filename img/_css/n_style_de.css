@@ -4896,7 +4896,7 @@ de128 : Overview
 de203 : NEBSample
 *************************************************/
 
-.de203 #nebpage{
+#nebpage{
     width: 100%;
     height: 100px;
     transform: translateY(-20px);
@@ -4908,7 +4908,7 @@ de203 : NEBSample
     align-items: center;
 }
 
-.de203 #nebpage::after{
+#nebpage::after{
     content: '';
     width: 100%;
     height: 6px;
@@ -4919,10 +4919,10 @@ de203 : NEBSample
     left: 0;
 }
 
-.de203 #nebpage .logo{
+#nebpage .logo{
     width: 18%;
 }
-.de203 #nebpage .logo::after{
+#nebpage .logo::after{
     content: '';
     width: 1px;
     height: 80px;
@@ -4932,22 +4932,23 @@ de203 : NEBSample
     top: 11px;
     left: 28%;
 }
-.de203 #nebpage .brand{
+#nebpage .brand{
     display: flex;
     align-items: center;
+    padding-top: 6px;
 }
-.de203 #nebpage .brand h1{
+#nebpage .brand h1{
     color: #fff;
         font-size: 2.9rem;
 }
 
-@media screen and (max-width < 1300px){
+@media screen and (max-width: 1300px){
     #nebpage .brand h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 @media screen and (max-width < 1200px){
-    .de203 #nebpage .logo::after{
+    #nebpage .logo::after{
         left: 23%;
     }
 }
@@ -5164,20 +5165,9 @@ max-width: 100px;
 
 .de203 .tit h3 {display: inline-block;}
 
-.de203 .tit button {
-    background: #eee;
-    border-radius: 5px;
-    margin-left: 2%;
-    width: 170px;
-    height: 35px;
-    border: none;
-}
 
-.de203 .tit button a {
-    color: #F2661B;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
+
 
 .de203 .tit button:hover {scale: 1.1;}
 
