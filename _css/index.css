@@ -1783,6 +1783,9 @@ de202 : 풀메뉴
     margin-top: 100px;
     padding-bottom: 100px;
 }
+.all_menu .full_menu .NEB{
+    grid-row:1/3;
+}
 
 .all_menu .full_menu .b_title {
     font-family: 'Poppins', sans-serif;
